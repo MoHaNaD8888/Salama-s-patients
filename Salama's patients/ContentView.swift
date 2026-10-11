@@ -7,15 +7,29 @@
 
 import SwiftUI
 
+
+
+
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        TabView{
+            AddPatientView()
+                .tabItem(){
+                    Label("add patient file" , systemImage: "folder.badge.plus")
+                    
+                }
+            PatientFilesView()
+                .tabItem(){
+                    Label("view patient files" , systemImage: "folder")
+                }
+            
+            
+            
+            
+            
+            
+            
         }
-        .padding()
     }
 }
 
